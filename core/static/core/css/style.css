@@ -1,0 +1,56 @@
+body{
+    background-color:#101218;
+}
+.row{
+    background-color: #494a4a;
+    padding: 50px;
+    margin-bottom: 30px;
+    color:white;
+}
+.titulo{
+    color:rosybrown;
+    text-align: center;
+}
+
+.titulosec{
+    color:rosybrown;
+    text-align: center;
+    
+}
+.columna{
+    padding: 10px;
+    margin-left: 20px;
+}
+.parrafo{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 3px;
+    margin-bottom: 1px;
+    color:grey;
+    text-align: center;
+}
+
+
+.h4{
+    color:#222a2e;
+ margin-bottom: 20px;
+}
+
+.h6{
+    margin-bottom:1px;
+    text-align: center;
+}
+ .imagen:hover{
+     background-color: lightblue;
+ }
+ .card-body{
+     color: grey;
+ }
+
+ .p{
+     background-color:black;
+     margin-bottom:50px;
+ }
+
+
+    
+

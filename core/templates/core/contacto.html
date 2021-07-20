@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% load static %}
+        <title>Gestion de Proveedores Contacto</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="{% static 'core/img/favicon.jpg '%}" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/validaciones.css' %}" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="..\..\static\core\js\formulario-contacto.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+                                                                                                  
+    </head>
+    <body>
+        <div class="container bg-light d-flex flex-column sticky-footer-wrapper min-vh-100">
+            <header class="jumbotron">
+                <h1 class="text-center">
+                    <img src="{% static 'core/img/cooperativa.jpg' %}" class="rounded-circle" alt="logo"/>
+                    <span class="text-nowrap">Cooperativa Ground Zero</span>
+                </h1>
+                <p class="text-justify">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam repellat earum fuga? Nihil adipisci in ut labore nobis, earum eos possimus ex eum eveniet delectus suscipit mollitia perspiciatis, repellat vitae!
+                </p>
+            </header>
+            <div class="col-12">
+                <span class="valorDolar"></span></div>
+            <nav class="navbar navbar-expand-md bg-light">
+                
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'core/img/cooperativa.jpg' %}" class="rounded-circle" width="80" alt="Logo" />
+                </a>
+
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/contacto">Contacto</a>
+                    </li>
+
+                    <li class="nav-item">
+                        
+                        <a class="nav-link" href="/proveedores">Proveedores</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <main class="flex-fill">
+                <section>
+                    <h2>Contacto</h2>
+                    <div class="form-group">
+                        <form id="formulario-contacto" name="formularioContacto" action="formulario-enviado.html" method="POST" >
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="fieldTipoContacto">
+                                            Tipo:<span class="alert alert-danger" role="alert"></span>
+                                    </label>
+                                    <select id="fieldTipoContacto" name="tipoContacto" class="form-control">
+                                        <option value="" >-- seleccione un tipo --</option>
+                                        <option value="felicitaciones">Felicitaciones</option>
+                                        <option value="sugerencia">Sugerencia</option>
+                                        <option value="reclamo">Reclamo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="fieldNombre">
+                                            Nombre:<span class="alert alert-danger" role="alert"></span> 
+                                    </label>                       
+                                    <input id="fieldNombre" class="form-control" type="text" name="nombre" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="fieldEmail">
+                                            Email:
+                                            <span class="alert alert-danger" role="alert"></span> 
+                                    </label>
+                                    <input id="fieldEmail" class="form-control" type="email" name="email" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="fieldFechaNacimiento">
+                                            Fecha Nacimiento:
+                                            <span class="alert alert-danger" role="alert"></span> 
+                                    </label>
+                                    <input id="fieldFechaNacimiento" class="form-control" type="date" name="fecha_nacimiento" />
+                                </div>                            
+                                <div class="col-md-6">
+                                    <label for="fieldRut">
+                                            Rut:
+                                            <span class="alert alert-danger" role="alert"></span> 
+                                    </label>
+                                    <input id="fieldRut" class="form-control" type="text" name="rut" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="fieldComentario">
+                                            Comentario:
+                                            <span class="alert alert-danger" role="alert"></span> 
+                                    </label>
+                                    <textarea id="fieldComentario" class="form-control" name="comentario"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" class="btn btn-success" name="submit">Enviar</button>
+                                    <button type="reset" class="btn btn-info" name="reset">Limpiar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>      
+            </main>
+            <footer>
+                <div class="row bg-dark">
+                    <div class="col-12 text-center text-warning">
+                            Programación Web<br/>
+                            Instituto Profesional Duoc UC
+                    </div>
+                </div>
+            </footer>      
+        </div>
+    </body>
+</html>
